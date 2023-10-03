@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/crud.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Barté - Crear Cuenta</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="barte" href="">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </a>
+            <a class="barte" href="./admin.html">
+                <h1>BARTÉ</h1>
+            </a>
+            <h2>Tus tragos favoritos en un solo lugar</h2>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <a href="./createProducts.html">
+                        <li>Insertar</li>
+                    </a>
+                    <a href="./readProducts.html">
+                        <li>Buscar</li>
+                    </a>
+                    <a href="./deleteProducts.html">
+                        <li>Eliminar</li>
+                    </a>
+                    <a href="./admin.html">
+                        <li>Inicio</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form action="/products/update" method="post">
+            <div>
+                <a href="./admin.html">
+                    <span class="material-symbols-outlined">
+                        cancel
+                    </span>
+                </a>
+                <h3>
+                    Actualizar Productos
+                </h3>
+            </div>
+            <div>
+                <label for="productID">ID del Producto: <span class="obligatorios">*</span></label>
+                <input type="text" id="productID" name="productID" required placeholder="Escriba el ID del producto a actualizar">
+                <label for="productName">Nombre del Producto: <span class="opcionales">*</span></label>
+                <input type="text" id="productName" name="productName" required placeholder="Escriba el nuevo nombre del producto">
+                <label for="productDescription">Descripción del Producto: <span class="opcionales"">*</span></label>
+                <input type="text" id="productDescription" name="productDescription" required placeholder="Escriba la nueva descripción del producto">
+                <label for="productPrice">Precio del Producto: <span class="opcionales">*</span></label>
+                <input type="text" id="productPrice" name="productPrice" required placeholder="Inserta el nuevo precio del producto">
+                <label for="productStock">Stock del Producto: <span class="opcionales">*</span></label>
+                <input type="number" id="productStock" name="productStock" required placeholder="Inserta el nuevo stock del producto">
+                <p id="aclaracion"><span class="obligatorios">*</span> los campos son obligatorios.</p>
+                <p id="aclaracion"><span class="opcionales">*</span> sólo completar en caso de querer modificar el campo.</p>
+            </div>
+            <div id="botonesFormulario">
+                <input type="submit" id="botonEnviar" value="ACTUALIZAR">
+                <input type="reset" id="botonBorrar"  value="BORRAR">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="pieDePagina">
+            <div>
+                <ul>
+                    <h4>Navegación:</h4>
+                    <li>Productos</li>
+                    <li>Envíos</li>
+                    <li>Más información</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Contáctanos:</h4>
+                    <li>Formulario de consulta</li>
+                    <li>Email</li>
+                    <li>WhatsApp</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Conocenos:</h4>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+    </footer>
+</body>
+</html>

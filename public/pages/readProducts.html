@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/crud.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Barté - Crear Cuenta</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="barte" href="">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </a>
+            <a class="barte" href="./admin.html">
+                <h1>BARTÉ</h1>
+            </a>
+            <h2>Tus tragos favoritos en un solo lugar</h2>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <a href="./createProducts.html">
+                        <li>Insertar</li>
+                    </a>
+                    <a href="./updateProducts.html">
+                        <li>Actualizar</li>
+                    </a>
+                    <a href="./deleteProducts.html">
+                        <li>Eliminar</li>
+                    </a>
+                    <a href="./admin.html">
+                        <li>Inicio</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form action="/products/get" method="post">
+            <div>
+                <a href="./admin.html">
+                    <span class="material-symbols-outlined">
+                        cancel
+                    </span>
+                </a>
+                <h3>
+                    Buscar Productos
+                </h3>
+            </div>
+            <div>
+                <label for="productSearch">ID o Nombre del Producto:</label>
+                <input type="text" id="productSearch" name="productSearch" placeholder="Escriba el ID o Nombre del producto">
+                <p id="aclaracion"><span class="obligatorios">*</span> los campos son obligatorios.</p>
+            </div>
+            <div id="botonesFormulario">
+                <input type="submit" id="botonEnviar" value="BUSCAR">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="pieDePagina">
+            <div>
+                <ul>
+                    <h4>Navegación:</h4>
+                    <li>Productos</li>
+                    <li>Envíos</li>
+                    <li>Más información</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Contáctanos:</h4>
+                    <li>Formulario de consulta</li>
+                    <li>Email</li>
+                    <li>WhatsApp</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4>Conocenos:</h4>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+    </footer>
+</body>
+</html>
