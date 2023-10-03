@@ -53,7 +53,7 @@ const actualizarData = async function (data) {
         const productID = data.productID;
         delete data.productID;
         for (let prop in data) {
-            if (data[prop] === null) {
+            if (data[prop] === null || data[prop] === "") {
                 delete data[prop];
             }
         }
