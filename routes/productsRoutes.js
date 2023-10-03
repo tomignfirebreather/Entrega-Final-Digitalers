@@ -15,9 +15,9 @@
 
     const { roleAuthenticator } = require('../middlewares/roleAuthenticator');
 
-    router.post('/insert', roleAuthenticator(admin), insertarProductos);
-    router.get('/get', roleAuthenticator(admin), buscarProductos);
-    router.put('/update', roleAuthenticator(admin), actualizarProductos);
-    router.delete('/delete', roleAuthenticator(admin), eliminarProductos);
+    router.post('/insert', roleAuthenticator('admin'), insertarProductos);
+    router.get('/get', roleAuthenticator('admin'), buscarProductos);
+    router.put('/update', roleAuthenticator('admin'), actualizarProductos);
+    router.delete('/delete', roleAuthenticator('admin'), eliminarProductos);
 
     module.exports = router;
