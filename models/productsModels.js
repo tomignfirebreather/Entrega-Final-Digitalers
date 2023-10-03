@@ -14,7 +14,7 @@ const buscarData = async function (data) {
             let value = data[key];
             let query = {};
             if (key === 'productID') {
-                query[key] = new ObjectId(value);
+                query['_id'] = new ObjectId(value);
             } else {
                 query[key] = value;
             }
@@ -23,7 +23,7 @@ const buscarData = async function (data) {
                 return { success: 'sidata', producto: result};
             }
         }
-        return { success: 'nodata' };
+        return { success: 'nodata', error: 'No se han encontrado coincidencias' };
     } catch (error) {
         return { success: 'error', error_db: 'Ocurrio un error al conectarse a MongoDB: ' + error };
     } finally {

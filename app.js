@@ -1,4 +1,5 @@
 const express = require('express');
+var methodOverride = require('method-override');
 const session = require('express-session');
 const path = require('path');
 const cors = require('cors');
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
