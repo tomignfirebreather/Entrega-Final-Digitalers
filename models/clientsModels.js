@@ -1,6 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
 const bcrypt = require('bcrypt');
-const session = require('express-session');
 const mongoUrlAtlas = process.env.MONGO_URL_ATLAS;
 const dbName = 'dbBarte';
 const client = new MongoClient(mongoUrlAtlas);
