@@ -58,7 +58,7 @@ const iniciarSesion = async (req, res) => {
 };
 const enviarSesion = async (req, res) => {
     if (req.session.userroltype == 'admin') {
-        res.sendFile(path.join(__dirname, '../public/admin.html'));
+        res.sendFile(path.join(__dirname, '../public/pages/admin.html'));
     } else if (req.session.userroltype == 'client'){
         res.sendFile(path.join(__dirname, '../public/index.html'));
     } else {
