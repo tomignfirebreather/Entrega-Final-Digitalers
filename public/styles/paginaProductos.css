@@ -32,6 +32,7 @@ header div, header ul {
     display: flex;
     align-items: center;
     gap: 60px;
+    margin: 0;
 }
 
 header li {
@@ -75,25 +76,47 @@ main {
     justify-content: flex-start;
 }
 
-#menuOpciones:hover {
+/* #menuOpciones:hover {
     border-width: 2px;
     border-style: solid;
     border-color: rgba(51, 51, 153, 0.5);
     box-shadow: none;
     background-image: linear-gradient(to left, rgb(6, 11, 39) 20%, rgba(51, 51, 153, 0.5) 100%);
 }
-
+ */
 #menuOpciones div {
-    margin: 32px 24px 32px 24px;
+    margin: 32px 24px 0px 24px;
+    font-size: 1em;
 }
 
-#menuOpciones h3, #menuOpciones li {
+#menuOpciones ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menuOpciones h3 {
     margin-bottom: 20px;
     list-style: none;
+    font-size: 1.4em;
+}
+
+#menuOpciones a {
+    text-decoration: none;
+    color: white;
+}
+
+#menuOpciones li {
+    margin-bottom: 10px;
+    text-align: start;
+    list-style: none;
+    font-size: 0.9em;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 6px;
 }
 
 #menuOpciones li:hover {
-    color: rgb(51, 51, 153);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 #seccionProductos {
@@ -109,17 +132,20 @@ main {
     justify-content: space-around;
 }
 
-#seccionProductos:hover {
+/* #seccionProductos:hover {
     border-width: 2px;
     border-style: solid;
     border-color: rgba(217, 13, 122, 0.5);
     box-shadow: none;
     background-image: linear-gradient(to right, rgb(6, 11, 39) 60%, rgba(217, 13, 122, 0.5) 100%);
-}
+} */
 
-.columnaProductos {
+#columnaProductos {
     display: flex;
     flex-direction: column;
+    max-height: 800px;
+    overflow-y: scroll;
+    padding: 20px;
 }
 
 .producto {
@@ -128,6 +154,11 @@ main {
     align-items: center;
     padding: 20px;
     margin: 20px;
+}
+
+.producto:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
 }
 
 .imagenProducto, .descripcionProducto {
@@ -141,18 +172,25 @@ main {
 .descripcionProducto {
     padding: 40px;
     width: 80%;
-    height: 300px;
+    height: auto;
     justify-content: space-evenly;
     margin-left: 40px;
 }
 
 .imagenProducto {
     width: 300px;
-    height: 300px;
+    height: auto;
+}
+
+.imagenProducto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .descripcionProducto h2 {
-    color: rgb(6, 11, 39);
+    color:white;
+    font-size: 1.6em;
 }
 
 footer {

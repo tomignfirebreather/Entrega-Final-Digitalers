@@ -52,7 +52,7 @@ header .barte:hover {
 }
 
 main {
-    background-image: url(../assets/images/Fondo-Barté.jpg);
+    background-color: rgba(6, 11, 39, 1);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -61,16 +61,17 @@ main {
 }
 
 main div:first-of-type {
+    box-shadow: 0 0 10px rgba(217, 13, 122, 1);
     margin: 4% auto auto 8%;
     padding: 1%;
     width: auto;
     height: auto;
     border-radius: 8px;
-    background-color: rgba(6, 11, 39, 0.9);
 }
 
 main div:last-of-type {
     display: flex;
+    box-shadow: 0 0 10px rgba(217, 13, 122, 1);
     flex-direction: row;
     justify-content:space-evenly;
     width: auto;
@@ -78,7 +79,6 @@ main div:last-of-type {
     margin: 1% 8% 8% 8%;
     padding: 6% 16%;
     border-radius: 12px;
-    background-color: rgba(6, 11, 39, 0.9);
 }
 main div a {
     text-decoration: none;

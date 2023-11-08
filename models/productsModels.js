@@ -10,17 +10,25 @@ const buscarData = async function (data) {
         const db = client.db(dbName);
         const collection = db.collection('productos');
 
-        for (let key in data) {
-            let value = data[key];
-            let query = {};
-            if (key === 'productID') {
-                query['_id'] = new ObjectId(value);
-            } else {
-                query[key] = value;
-            }
-            result = await collection.findOne(query);
-            if(result !== null){
+        if(data === 'buscarTodo'){
+            const result = await collection.find({}).toArray();
+            if(result.length !== 0){
                 return { success: 'sidata', producto: result};
+            }
+        }
+        else{
+            for (let key in data) {
+                let value = data[key];
+                let query = {};
+                if (key === 'productID') {
+                    query['_id'] = new ObjectId(value);
+                } else {
+                    query[key] = value;
+                }
+                result = await collection.findOne(query);
+                if(result !== null){
+                    return { success: 'sidata', producto: result};
+                }
             }
         }
         return { success: 'nodata', error: 'No se han encontrado coincidencias' };

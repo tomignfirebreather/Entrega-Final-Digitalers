@@ -82,6 +82,29 @@ const buscarProductos = async (req, res) => {
         });
     }
 };
+
+const buscarTotalProductos = async (req, res) => {
+    const resultado = await buscarData('buscarTodo');
+    if (resultado.success == 'sidata') {
+        res.status(300).json({
+            message: 'Se han encontrado productos',
+            data: resultado.producto
+        });
+    } else if(resultado.error !== undefined) {
+        res.status(400).send({
+            message: resultado.error
+        });
+    } else if(resultado.error_db !== undefined) {
+        res.status(400).send({
+            message: resultado.error_db
+        });
+    } else {
+        res.status(500).send({
+            message: 'No se han encontrado coincidencias'
+        });
+    }
+};
+
 const actualizarProductos = async (req, res) => {
     var productID = req.body.productID;
     var productname = req.body.productName;
@@ -151,6 +174,7 @@ const eliminarProductos = async (req, res) => {
 module.exports = {
     insertarProductos,
     buscarProductos,
+    buscarTotalProductos,
     actualizarProductos,
     eliminarProductos
 };
