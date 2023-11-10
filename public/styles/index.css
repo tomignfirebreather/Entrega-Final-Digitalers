@@ -41,14 +41,17 @@ header li {
 header a {
     text-decoration: none;
     color: white;
+    padding: 6px;
 }
 
 header a:hover {
-    color: rgb(6, 11, 39);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
 }
 
 header .barte:hover {
     color: rgb(217, 13, 122);
+    background-color: transparent;
 }
 
 main {
@@ -93,7 +96,7 @@ main {
 
 #seccionInformativa div {
     background-color: rgb(6, 11, 39);
-    box-shadow: 0 0 10px rgb(51, 51, 153);
+    box-shadow: 0 0 10px rgb(102, 16, 242);
     width: 20%;
     height: auto;
     border-radius: 16px;
@@ -110,8 +113,8 @@ main {
 }
 
 #seccionInformativa div:hover {
-    border: 2px solid rgb(51, 51, 153);
-    background-color: rgba(51, 51, 153, 0.5);
+    border: 2px solid rgb(102, 16, 242);
+    background-color: rgba(102, 16, 242, 0.5);
     box-shadow: none;
     transition-delay: 0s, 0.25s, 0.25s;
     transition-duration: 0.25s, 0.s, 0s;
@@ -161,7 +164,7 @@ main {
 }
 
 #seccionFinal a button {
-    background-image: linear-gradient(to right, rgb(51, 51, 153) 0%, rgb(217, 13, 122) 50%);
+    background-image: linear-gradient(to right, rgb(102, 16, 242) 0%, rgb(217, 13, 122) 50%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -175,7 +178,7 @@ main {
 
 #seccionFinal a button:hover {
     border: none;
-    background-image: linear-gradient(to right, rgb(217, 13, 122) 50%, rgb(51, 51, 153) 100%);
+    background-image: linear-gradient(to right, rgb(217, 13, 122) 50%, rgb(102, 16, 242) 100%);
     cursor: pointer;
 }
 
@@ -189,6 +192,16 @@ footer {
     width: 100%;
     height: auto;
     padding: 40px;
+}
+
+#pieDePagina a {
+    text-decoration: none;
+}
+
+#pieDePagina img {
+    width: 2em;
+    height: auto;
+    margin: 1em;
 }
 
 #pieDePagina h4 {

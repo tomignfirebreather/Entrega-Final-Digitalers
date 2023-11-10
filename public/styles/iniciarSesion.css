@@ -41,14 +41,17 @@ header li {
 header a {
     text-decoration: none;
     color: white;
+    padding: 6px;
 }
 
 header a:hover {
-    color: rgb(6, 11, 39);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
 }
 
 header .barte:hover {
     color: rgb(217, 13, 122);
+    background-color: transparent;
 }
 
 main {
@@ -120,7 +123,7 @@ form .material-symbols-outlined {
 }
 
 #boton {
-    background-image: linear-gradient(to right, rgb(51, 51, 153) 0%, rgb(217, 13, 122) 50%);
+    background-image: linear-gradient(to right, rgb(102, 16, 242) 0%, rgb(217, 13, 122) 50%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -134,7 +137,7 @@ form .material-symbols-outlined {
 }
 
 #boton:hover {
-    background-image: linear-gradient(to right, rgb(217, 13, 122) 50%, rgb(51, 51, 153) 100%);
+    background-image: linear-gradient(to right, rgb(217, 13, 122) 50%, rgb(102, 16, 242) 100%);
     cursor: pointer;
 }
 
@@ -152,6 +155,17 @@ footer {
     width: 100%;
     height: auto;
     padding: 40px;
+}
+
+#pieDePagina a {
+    text-decoration: none;
+}
+
+#pieDePagina img {
+    width: 2em;
+    height: auto;
+    margin: 1em;
+
 }
 
 #pieDePagina h4 {

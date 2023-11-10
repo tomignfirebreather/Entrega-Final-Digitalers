@@ -1,6 +1,7 @@
 //Lógica CRUD de las rutas de productos
 /*  /api/products/insert
     /api/products/get
+    /api/products/getAll
     /api/products/update
     /api/products/delete */
 
