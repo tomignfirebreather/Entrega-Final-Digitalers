@@ -51,7 +51,7 @@ header a:hover {
 }
 
 header .barte:hover {
-    color: rgb(217, 13, 122);
+    color: #E6E6E6;
     background-color: transparent;
 }
 
@@ -113,6 +113,13 @@ main {
     font-size: 1.6em;
 }
 
+#cantidades {
+    display: flex;
+    justify-content:start;
+    align-items:center;
+    gap: 20px;
+}
+
 .btn-custom {
     background-color: #6610f2;
     border-color: #6610f2;
@@ -148,15 +155,19 @@ footer {
 
 #pieDePagina a {
     text-decoration: none;
-}
-
-#pieDePagina img {
-    width: 2em;
-    height: auto;
-    margin: 1em;
-
+    margin: 0.5em;
 }
 
 #pieDePagina h4 {
     margin-bottom: 20px;
+}
+
+#pieDePagina div:last-of-type ul h4 {
+    margin-bottom: 40px;
+}
+
+.bi-instagram:hover path,
+.bi-facebook:hover path,
+.bi-linkedin:hover path {
+    fill: #E6E6E6;
 }

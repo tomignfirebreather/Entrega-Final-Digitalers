@@ -12,6 +12,7 @@ const insertarProductos = async (req, res) => {
     var productdescription = req.body.productDescription;
     var productprice = req.body.productPrice;
     var productstock = req.body.productStock;
+    var productimage = req.body.productImage;
     var data = {
         productname,
     };
@@ -21,7 +22,8 @@ const insertarProductos = async (req, res) => {
             productname,
             productdescription,
             productprice,
-            productstock
+            productstock,
+            productimage
         };
         resultado = await guardarData(data);
         if(resultado.success) {
@@ -111,6 +113,7 @@ const actualizarProductos = async (req, res) => {
     var productdescription = req.body.productDescription;
     var productprice = req.body.productPrice;
     var productstock = req.body.productStock;
+    var productimage = req.body.productImage;
     var data = {
         productID,
     };
@@ -121,7 +124,8 @@ const actualizarProductos = async (req, res) => {
             productname,
             productdescription,
             productprice,
-            productstock
+            productstock,
+            productimage
         };
         resultado = await actualizarData(data);
         if(resultado.success) {

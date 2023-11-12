@@ -32,6 +32,7 @@ header div, header ul {
     display: flex;
     align-items: center;
     gap: 60px;
+    margin: 0;
 }
 
 header li {
@@ -50,7 +51,7 @@ header a:hover {
 }
 
 header .barte:hover {
-    color: rgb(217, 13, 122);
+    color: #E6E6E6;
     background-color: transparent;
 }
 
@@ -70,6 +71,11 @@ main div:first-of-type {
     width: auto;
     height: auto;
     border-radius: 8px;
+}
+
+main div:first-of-type h3 {
+    font-size: 1.4em;
+    font-weight: 200;
 }
 
 main div:last-of-type {
@@ -121,15 +127,19 @@ footer {
 
 #pieDePagina a {
     text-decoration: none;
-}
-
-#pieDePagina img {
-    width: 2em;
-    height: auto;
-    margin: 1em;
-
+    margin: 0.5em;
 }
 
 #pieDePagina h4 {
     margin-bottom: 20px;
+}
+
+#pieDePagina div:last-of-type ul h4 {
+    margin-bottom: 40px;
+}
+
+.bi-instagram:hover path,
+.bi-facebook:hover path,
+.bi-linkedin:hover path {
+    fill: #E6E6E6;
 }

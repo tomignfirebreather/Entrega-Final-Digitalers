@@ -32,6 +32,7 @@ header div, header ul {
     display: flex;
     align-items: center;
     gap: 60px;
+    margin: 0;
 }
 
 header li {
@@ -50,7 +51,7 @@ header a:hover {
 }
 
 header .barte:hover {
-    color: rgb(217, 13, 122);
+    color: #E6E6E6;
     background-color: transparent;
 }
 
@@ -106,20 +107,26 @@ form h3 {
 
 form a {
     text-decoration: none;
-    color: white;
+    color: #E6E6E6;
 }
 
 form a:hover {
-    color: rgb(217, 13, 122);
+    color: white;
 }
 
 form .material-symbols-outlined {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
-    font-size: 2em;
+    font-size: 2.2em;
     width: 500px;
     height: auto;
+}
+
+form .btn-close {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 
 #boton {
@@ -159,15 +166,19 @@ footer {
 
 #pieDePagina a {
     text-decoration: none;
-}
-
-#pieDePagina img {
-    width: 2em;
-    height: auto;
-    margin: 1em;
-
+    margin: 0.5em;
 }
 
 #pieDePagina h4 {
     margin-bottom: 20px;
+}
+
+#pieDePagina div:last-of-type ul h4 {
+    margin-bottom: 40px;
+}
+
+.bi-instagram:hover path,
+.bi-facebook:hover path,
+.bi-linkedin:hover path {
+    fill: #E6E6E6;
 }
