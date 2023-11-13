@@ -3,8 +3,10 @@ const path = require('path');
 const {
     validarData,
     guardarPerfil,
-    validarPerfil
+    validarPerfil,
+    generarJWT
 } = require('../models/clientsModels');
+const { log } = require('console');
 
 const crearPerfil = async (req, res) => {
     var username = req.body.name;
@@ -17,9 +19,12 @@ const crearPerfil = async (req, res) => {
     if (resultado.success) {
         resultado = await guardarPerfil(username, useremail, userpass, userroltype);
         if(resultado.success) {
+            const token = await generarJWT(useremail);
             req.session.username = username;
             req.session.useremail = useremail;
             req.session.userroltype = userroltype;
+            req.session.token = token;
+            res.set({ 'token': token });
             res.status(302).redirect('/clients/session/login');
         } else {
             res.status(400).send({
@@ -37,14 +42,18 @@ const crearPerfil = async (req, res) => {
     }
 };
 const iniciarSesion = async (req, res) => {
+    log(req.body);
     var useremail = req.body.email;
     var userpass = req.body.pass;
     const resultado = await validarPerfil(useremail, userpass);
 
     if (resultado.success){
+        const token = await generarJWT(useremail);
         req.session.username = resultado.username;
         req.session.useremail = resultado.useremail;
         req.session.userroltype = resultado.userroltype;
+        req.session.token = token;
+        res.set({ 'token': token });
         res.status(302).redirect('/clients/session/login');
     } else if(resultado.error_db !== undefined) {
         res.status(400).send({
@@ -67,7 +76,22 @@ const enviarSesion = async (req, res) => {
         });
     }
 };
+const verificarSesion = async (req, res) => {
+    const token = req.session.token;
+    if (token === undefined || token === null) {
+        res.status(400).json({
+            message: 'Sesión inactiva'
+        });
+    } else {
+        res.status(200).json({
+            message: 'Sesión activa'
+        });
+    }
+}
 const cerrarSesion = async (req, res) => {
+    req.session.destroy();
+    res.removeHeader('token');
+    res.redirect('/');
 };
 const editarPerfil = async (req, res) => {
 };
@@ -85,6 +109,7 @@ module.exports = {
     iniciarSesion,
     enviarSesion,
     cerrarSesion,
+    verificarSesion,
     editarPerfil,
     eliminarPerfil,
     buscarPerfil,

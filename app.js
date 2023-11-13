@@ -2,6 +2,7 @@ const express = require('express');
 var methodOverride = require('method-override');
 const session = require('express-session');
 const path = require('path');
+const compression = require('compression');
 const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -12,6 +13,7 @@ const clientsRoutes = require('./routes/clientsRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 
 app.use(cors());
+app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));

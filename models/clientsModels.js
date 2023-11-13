@@ -1,6 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const mongoUrlAtlas = process.env.MONGO_URL_ATLAS;
+const privateKey = process.env.PRIVATE_KEY;
 const dbName = 'dbBarte';
 const client = new MongoClient(mongoUrlAtlas);
 
@@ -64,8 +66,18 @@ const validarPerfil = async function (useremail, userpass) {
     }
 };
 
+const generarJWT = async function (useremail) {
+    var token = jwt.sign(
+        {useremail},
+        privateKey,
+        {expiresIn: '1h'}
+    );
+    return token;
+};
+
 module.exports = {
     validarData,
     guardarPerfil,
-    validarPerfil
+    validarPerfil,
+    generarJWT
 };

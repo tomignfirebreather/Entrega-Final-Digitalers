@@ -79,14 +79,6 @@ main {
     justify-content: flex-start;
 }
 
-/* #menuOpciones:hover {
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(102, 16, 242, 0.5);
-    box-shadow: none;
-    background-image: linear-gradient(to left, rgb(6, 11, 39) 20%, rgba(102, 16, 242, 0.5) 100%);
-}
- */
 #menuOpciones div {
     margin: 32px 24px 0px 24px;
     font-size: 1em;
@@ -134,14 +126,6 @@ main {
     align-items: center;
     justify-content: space-around;
 }
-
-/* #seccionProductos:hover {
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(217, 13, 122, 0.5);
-    box-shadow: none;
-    background-image: linear-gradient(to right, rgb(6, 11, 39) 60%, rgba(217, 13, 122, 0.5) 100%);
-} */
 
 #columnaProductos {
     display: flex;

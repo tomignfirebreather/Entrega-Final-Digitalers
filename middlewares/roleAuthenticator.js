@@ -3,7 +3,7 @@ function roleAuthenticator(role) {
         if(req.session.userroltype === role) {
             next();
         } else {
-            res.status(403).send({message: 'Usted no está autorizado para acceder a este recurso'});
+            return res.status(403).send({message: 'Usted no está autorizado para acceder a este recurso'});
         }
     }
 }
