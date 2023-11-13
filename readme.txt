@@ -1,4 +1,3 @@
------------------------------------------------------------------------------------------------
 Datos del administrador para poder acceder a las operaciones CRUD de productos:
 
 useremail: "administrador@hotmail.com"
@@ -42,4 +41,3 @@ ingredientes necesarios para prepararlos. Más adelente la intención es que tam
 ofrecer las recetas de cómo preparar los tragos paso a paso, datos exclusivos sobre los tragos 
 que se ofrecen y sobre la cocktelería. Además de una sección de "favoritos" en donde se puedan
 valorar los tragos y añadir notas o comentarios.
------------------------------------------------------------------------------------------------
